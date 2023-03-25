@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
+import TodoForm from './components/TodoForm';
+import Todos from './components/Todos';
 function App() {
   return (
     <div className="App">
-      <h1>Task Planner</h1>
-      <h1>PayPal</h1>
+      <h1 className='main-heading'>Todo List</h1>
+      <TodoForm/>
+      <Todos/>
     </div>
   );
 }
