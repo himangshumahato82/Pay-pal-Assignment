@@ -1,7 +1,7 @@
 
 
 body {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   background-color: #D0E4F2;
   
@@ -21,24 +21,20 @@ header h1 {
   color: #2c3e50;
   font-weight: 200;
 }
-input{
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 20px;
-}
+
 
 
 .inputa {
   font-size: 20px;
   color: #2c3e50;
-  width: 40%;
+  width: 70%;
    height: 40px; 
   border: none;
   outline: none;
   border-bottom: 1px solid #2c3e50;
   padding: 5px;
   border-radius: 10px;
+  /* margin-bottom: 50px; */
 }
 
 .task {
@@ -91,10 +87,16 @@ article {
 }
 
 .submitButton{
-  /* margin-top: 20px; */
+ 
   width: 15%;
-  /* margin-left: 45%; */
+  border: none;
   cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.submitButton:hover{
+  background-color: aqua;
 }
 
 .button.selected {

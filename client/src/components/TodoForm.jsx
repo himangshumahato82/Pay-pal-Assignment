@@ -6,11 +6,7 @@ import { addNewTodo } from "../redux/actions";
 
 
 const TodoForm = () => {
-    const [text, setText] = useState({
-        name:"",
-        task:"",
-        date:""
-    });
+    const [text, setText] = useState("")
 
     console.log(text)
     const dispatch = useDispatch();
@@ -25,30 +21,25 @@ const TodoForm = () => {
     }
    
     const onInputChange = (e) => {
-        const { name, value } = e.target;
-        setText((text) => ({
-            ...text,
-            [name]: value,
-          }));
+       
+        setText(e.target.value)
+         
     }
 
     return (
         <div className="todo">
             <form className="form" onSubmit={onFormSubmit} 
             style={{display:"flex",justifyContent:"space-between"}}
-             name="name"
-             onChange={onInputChange} 
-             
-             value={text.name}>
-            <input type="text"  placeholder="Enter Your Name"/>
+             >
+            
                 <input
-                    placeholder="Enter Your Work..."
+                    placeholder="Enter Your Task..."
                     className="inputa"
                     name="work"
                     onChange={onInputChange}
                     value={text.task}
                 />
-                <input type="date"  name="date"  onChange={onInputChange}  value={text.date}/>
+               
                 <input  type="submit" className="submitButton" value="Submit" />
 
             </form>

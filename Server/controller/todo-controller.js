@@ -4,10 +4,8 @@ export const addTodo = async (request, response) => {
     try {
         const newTodo = await Todo.create({
            
-            name:request.body.name,
             data: request.body.data,
-            date:request.body.date,
-            createdAt: Date.now()
+            createdAt: new Date()
         })
 
         await newTodo.save();

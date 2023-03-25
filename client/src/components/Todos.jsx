@@ -15,6 +15,7 @@ export const Todos = () => {
   const dispatch = useDispatch();
 
   const todos = useSelector(state => state.todos);
+  console.log(todos)
   const currentTab = useSelector(state => state.currentTab);
 
   useEffect(() => {
@@ -57,9 +58,11 @@ export const Todos = () => {
       <ul>
         {
           getTodos().map(todo => (
+          
             <Todo
               key={todo._id}
               todo={todo}
+           
             />
           ))
         }
