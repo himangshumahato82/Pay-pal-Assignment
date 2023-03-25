@@ -43,7 +43,12 @@ const Todo = ({ todo }) => {
                     onChange={(e) => setText(e.target.value)}
                 />
             </form>
-
+            <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
+               Name
+             </span>
+          <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
+            Date
+          </span>
             <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
                 <i className="fas fa-trash" />
             </span>
